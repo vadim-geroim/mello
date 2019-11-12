@@ -75,3 +75,96 @@ header {
   flex: 0 0 auto;
   margin-left: 10px;
 }
+
+.list {
+  width: 300px;
+  height: calc(100% - 10px - 17px);
+}
+
+.list > * {
+  background-color: #e2e4e6;
+  color: #333;
+  padding: 0 10px;
+}
+
+.list.add > button {
+  height: 40px;
+  text-align: left;
+  background-color: #025c91;
+  font-weight: 100;
+  color: #ffffffcc;
+}
+
+.list.add > button:focus {
+  outline: white auto 5px;
+  outline-offset: -5px;
+}
+
+.list header,
+.list.add > button {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+}
+
+.list:not(.add) > header > button {
+  width: 100%;
+  margin-top: 4px;
+  line-height: 36px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+
+.list:not(.add) > button:last-child {
+  display: block;
+  outline-offset: -5px;
+  width: 100%;
+  text-align: left;
+  line-height: 36px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #888;
+  cursor: pointer;
+}
+
+.list ul {
+  list-style: none;
+  margin: 0;
+  max-height: calc(100% - 36px - 36px);
+  overflow-y: auto;
+}
+
+.list li {
+  cursor: pointer;
+  white-space: pre-wrap;
+}
+
+.list li > button {
+  width: calc(100% - 8px);
+  margin: 4px;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+button {
+  display: inline;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+  background-color: inherit;
+}

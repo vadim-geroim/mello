@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.ui {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.3em;
+}
+
+.ui {
+  background-color: #0079bf;
+  color: #eee;
+}
+
+nav {
+  background-color: #0067a3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  padding: 10px;
+  height: 40px;
+}
+
+nav a,
+nav a:visited,
+nav button {
+  text-decoration: inherit;
+  color: inherit;
+  background-color: unset;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav a:focus,
+nav a:visited:focus,
+nav button:focus {
+  outline: white auto 5px;
+  outline-color: white;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+.nav--left {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  max-width: 75%;
+}
+
+header {
+  font-size: 1.1em;
+  height: 40px;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  overflow-x: auto;
+  height: calc(100% - 80px);
+}
+
+.container > * {
+  flex: 0 0 auto;
+  margin-left: 10px;
+}

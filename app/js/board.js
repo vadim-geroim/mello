@@ -1,12 +1,16 @@
 class Card {
   constructor(text) {
     this.text = text;
+    this.id = ++Card.lastId;
   }
 }
+
+Card.lastId = 0;
 
 class List {
   constructor(title) {
     this.title = title;
+    this.id = ++List.lastId;
     this.cards = [];
   }
 
@@ -16,8 +20,11 @@ class List {
   }
 }
 
+List.lastId = 0;
+
 class Board {
   constructor() {
+    this.id = ++Board.lastId;
     this.lists = [];
   }
 
@@ -25,4 +32,14 @@ class Board {
     var list = new List(text);
     this.lists.push(list);
   }
+
+  addCard(listId, cardText) {
+    this.lists.forEach(function(list) {
+      if (listId === list.id) {
+        list.addCard(cardText);
+      }
+    });
+  }
 }
+
+Board.lastId = 0;
